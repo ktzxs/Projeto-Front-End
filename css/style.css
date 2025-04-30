@@ -37,7 +37,7 @@
     --weight-bold: 700;
 
     /*espaço*/
-    --section-spacing: 60px
+    --section-spacing: 120px
 
     /*borda*/
     --border: hsl(186°, 48%, 62%);
@@ -288,7 +288,8 @@ li {
 
 .service-list {
   grid-template-columns: repeat(4, 1fr);
-  display: grid;
+  display: flex;
+  flex-direction: row;
   padding-block: 60px 30px;
   padding-inline: 25px;
   gap: 30px;
@@ -358,7 +359,98 @@ li {
   filter: contrast(1.4) brightness(1.1) drop-shadow(0 010px #6FC3CC);
 }
 
+/*sobre*/
+.container-sobre {
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
+.about .container-sobre {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
 
+.section {
+  padding-block-end: var(--section-spacing);
+}
 
+.about {
+  padding-block-end: 0;
+}
 
+.about-banner {
+  margin-block-end: 50px;
+  position: relative;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.about-banner img {
+  filter: contrast(1.2) brightness(0.9);
+  transition: filter 0.4s ease;
+}
+
+.about-banner img:hover {
+  filter: contrast(1.4) brightness(1.1) drop-shadow(0 0 10px #024059)
+}
+
+.about .section-title {
+  text-align: center;
+}
+
+.about .section-subtitle {
+  color: #024059;
+  text-align: center;
+  font: var(--fs-3);
+  font-weight: var(--weight-semibold);
+  text-shadow: var(--shadow-1);
+}
+
+.about .section-text1 {
+  margin-block: 25px 15px;
+  text-align: justify;
+}
+
+.about-content .btn {
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+
+/*parallax*/
+.parallax {
+  background-image: url(../img/parallax.jpg);
+  min-height: 750px;
+  width: 100%;
+  background-size:cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  color: #04BF8A;
+  font-size: var(--fs-1);
+  text-shadow: #04BF8A;
+  margin-bottom: 30px;
+}
+
+.text-parallax {
+  font-size: var(--fs-3);
+  color: cadetblue;
+  text-align: center;
+  margin: 30px;
+}
+
+.btn {
+  margin-top: 0 auto;
+}
+
+.content {
+  max-width: 800px;
+}
